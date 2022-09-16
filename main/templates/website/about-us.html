@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../../static/website/css/style.css">
+    <link rel="stylesheet" href="../../static/website/css/contact.css">
+    <link rel="stylesheet" href="../../static/website/css/Responsive Grid System/grid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Top Header -->
+    {% include 'website/top_header.html'%}
+  <!-- Section Header menu  -->
+  {% include 'website/navbar.html'%}
+     <!-- Header Detail-->
+     <section>
+        <div class="slideshow-container">
+                
+            <div class="mySlides fade">
+                <img src="../../static/website/image/Services/detail.jpg">
+                <div class="title">DDD</div>
+                <div class="content">SSS</div>
+            </div>
+        
+        </div>  
+    </section>
+
+
+<section class="about-us">
+    <div class="container">
+        <div class="row">
+            {% for about in abouts %}
+            <div class="col-lg-6 col-md-12 about-img">
+                <img src="../../static/uploads/{{about.image}}" alt="">
+            </div>
+            <div class="col-lg-6 col-md-12 about-text">
+                <div class="about-heading">
+                    <h2>{{about.title}}</h2>
+                </div>
+                <div class="about-desc">
+                    <p>{{about.content}}</p>
+                </div>
+            </div>
+            {% endfor %}
+         
+        </div>
+    </div>
+    </section>
+
+ <!-- Section Services -->
+ <section>
+    <div class="service">
+      <div class="container">
+          <div class="service-heading">
+              <h2 style="text-align: center;">Our <span>Services</span></h2>
+              <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, iusto.</p>
+          </div>  
+          <div class="row service-1">
+              <article class="col-lg-4 col-md-6 col-xs-12 serv">
+                  <div class="service-item">
+                      <div class="art">
+                           <i class="fas fa-coins"></i>
+                          <h3>Financial Analysis</h3>
+                      </div>
+                      <div class="service-text">
+                          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas harum non possimus aliquam. Beatae repellendus voluptatibus, aperiam quaerat.</p>
+                      </div>
+                  </div>
+              </article>
+              <article class="col-lg-4 col-md-6 col-xs-12 serv">
+                  <div class="service-item">
+                      <div class="art">
+                          <i class="fas fa-chart-line"></i>
+                          <h3>Success Report</h3>
+                      </div>
+                      <div class="service-text">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas harum non possimus aliquam. Beatae repellendus voluptatibus, aperiam quaerat.</p>
+                    </div>
+              </article>
+              <article class="col-lg-4 col-md-6 col-xs-12 serv hidden-md-down">
+                  <div class="service-item">
+                      <div class="art">
+                          <i class="fas fa-money-bill"></i>
+                          <h3>Business Growth</h3>
+                      </div>
+                      <div class="service-text">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas harum non possimus aliquam. Beatae repellendus voluptatibus, aperiam quaerat.</p>
+                    </div>
+              </article>
+          </div>
+          <div class="row service-2">
+              <article class="col-lg-4 col-md-6 col-xs-12 serv">
+                  <div class="service-item">
+                      <div class="art">
+                          <i class="fas fa-briefcase"></i>
+                          <h3>Risk Management</h3>
+                      </div>
+                      <div class="service-text">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas harum non possimus aliquam. Beatae repellendus voluptatibus, aperiam quaerat.</p>
+                    </div>
+              </article>
+              <article class="col-lg-4 col-md-6 col-xs-12 serv">
+                  <div class="service-item">
+                      <div class="art">
+                          <i class="fas fa-tasks"></i>
+                          <h3>Marketing Plan</h3>
+                      </div>
+                      <div class="service-text">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas harum non possimus aliquam. Beatae repellendus voluptatibus, aperiam quaerat.</p>
+                    </div>
+              </article>
+              <article class="col-lg-4 col-md-6 col-xs-12 serv mt-50 hidden-md-down">
+                  <div class="service-item">
+                      <div class="art">
+                          <i class="fas fa-globe"></i>
+                          <h3>Global Business</h3>
+                      </div>
+                      <div class="service-text">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas harum non possimus aliquam. Beatae repellendus voluptatibus, aperiam quaerat.</p>
+                    </div>
+              </article>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Section Portfolio -->
+{% include 'website/portfolio.html'%}
+
+<!-- Team Members -->
+<section class="team">
+    <div class="container">
+        <div class="sec-title">
+            <h2><span>Meet </span>Our Team</h2>
+        </div>
+        <div class="row team-all">
+            <div class="col-lg-3 col-md-6 team-pro hover-effect">
+                <div class="team-wrap">
+                    <div class="team-img">
+                        <img src="../../static/website/image/Team/t-1.jpg" alt="" />
+                    </div>
+                    <div class="team-content">
+                        <div class="team-info">
+                            <h3>Carls Jhons</h3>
+                            <p>Financial Advisor</p>
+                            <div class="team-socials">
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                           <span><a href="#" style="text-decoration: none;">View All</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 team-pro hover-effect">
+                <div class="team-wrap">
+                    <div class="team-img">
+                        <img src="../../static/website/image/Team/t-2.jpg" alt="" />
+                    </div>
+                    <div class="team-content">
+                        <div class="team-info">
+                            <h3>Arling Tracy</h3>
+                            <p>Acountant</p>
+                            <div class="team-socials">
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <span><a href="#" style="text-decoration: none;">View All</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 team-pro pb-none hover-effect">
+                <div class="team-wrap">
+                    <div class="team-img">
+                        <img src="../../static/website/image/Team/t-3.jpg" alt="" />
+                    </div>
+                    <div class="team-content">
+                        <div class="team-info">
+                            <h3>Mark Web</h3>
+                            <p>Founder &amp; CEO</p>
+                            <div class="team-socials">
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <span><a href="#" style="text-decoration: none;">View All</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 team-pro hover-effect">
+                <div class="team-wrap">
+                    <div class="team-img">
+                        <img src="../../static/website/image/Team/t-4.jpg" alt="" />
+                    </div>
+                    <div class="team-content">
+                        <div class="team-info">
+                            <h3>Katy Grace</h3>
+                            <p>Team Leader</p>
+                            <div class="team-socials">
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <span><a href="#" style="text-decoration: none;">View All</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+
+<!-- Contact -->
+{% include 'website/contact.html'%}
+
+
+    <a href="#" class="scroll-to-top" style="display: block;"> <i class="fas fa-angle-up"></i></a>
+
+    <script src="../../static/website/js/jquery-3.5.1.js"></script>
+    <script src="../../static/website/js/portfolio.js"></script>
+    <script src="../../static/website/js/scroll.js"></script>
+</body>
+</html>

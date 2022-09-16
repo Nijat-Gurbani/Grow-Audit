@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/website/css/Responsive Grid System/grid.css">
+    <link rel="stylesheet" href="../../static/website/css/style.css">
+    <link rel="stylesheet" href="../../static/website/css/contact.css">
+    <link rel="stylesheet" href="../../static/website/css/service.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+ <!-- Top Header -->
+ {% include 'website/top_header.html'%}
+
+  <!-- Section Header menu  -->
+  {% include 'website/navbar.html'%}
+    
+    <!-- Header Detail-->
+
+    <!-- Section Service -->   
+<section id="service">
+    <div class="service-container">
+      <div class=" col-lg-12 col-xs-12 statistic-heading">
+        <h2>Our <span>Service</span></h2>
+      </div>
+        <div class="flexbox-service flexbox-service-2">
+            {% for service in services %}
+            <div class="flexbox-serv">
+                <img src="../../static/uploads/{{service.image}}" alt="Slide Image">
+                <div class="text-block">
+                  <h3>{{service.title}}</h3>
+                  <div class="text">
+                    <p>{{service.content}}</p>
+                  </div>
+                </div>
+              </div>
+       
+            {% endfor %}
+    
+        </div>
+    </div>
+</section> 
+
+
+<!-- Portfolio -->
+{% include 'website/portfolio.html'%}
+<!-- Offer -->
+{% include 'website/choose.html'%}
+    <!-- Section Contact -->
+    {% include 'website/contact.html'%}
+
+    <a href="#" class="scroll-to-top" style="display: block;"> <i class="fas fa-angle-up"></i></a>
+
+    
+
+
+     <script src="../../static/website/js/jquery-3.5.1.js"></script>
+    <script src="../../static/website/js/scroll.js"></script>
+    <script src="../../static/website/js/portfolio.js"></script>
+ </body>  
+</html>

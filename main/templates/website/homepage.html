@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../static/website/css/style.css">
+  <link rel="stylesheet" href="../../static/website/css/Responsive Grid System/grid.css">
+  <link rel="stylesheet" href="../../static/website/css/offer.css">
+  <link rel="stylesheet" href="../../static/website/css/contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<!-- Top Header -->
+{% include 'website/top_header.html'%}
+<!-- Section Header menu  -->
+{% include 'website/navbar.html'%}
+<!--Start Section Slider -->
+{% include 'website/slider.html'%}
+<!--End Section Slider -->
+
+
+ <!-- Section Services -->
+<section>
+    <div class="service">
+      <div class="container">
+          <div class="service-heading">
+              <h2 style="text-align: center;">Our <span>Services</span></h2>
+              <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, iusto.</p>
+          </div>  
+          <div class="row service-1">
+              <article class="col-lg-4 col-md-6 col-xs-12 serv">
+                  <div class="service-item">
+                      <div class="art">
+                           <i class="fas fa-coins"></i>
+                          <h3>Financial Analysis</h3>
+                      </div>
+                      <div class="service-text">
+                          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas harum non possimus aliquam. Beatae repellendus voluptatibus, aperiam quaerat.</p>
+                      </div>
+                  </div>
+              </article>
+              <article class="col-lg-4 col-md-6 col-xs-12 serv">
+                  <div class="service-item">
+                      <div class="art">
+                          <i class="fas fa-chart-line"></i>
+                          <h3>Success Report</h3>
+                      </div>
+                      <div class="service-text">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas harum non possimus aliquam. Beatae repellendus voluptatibus, aperiam quaerat.</p>
+                    </div>
+              </article>
+              <article class="col-lg-4 col-md-6 col-xs-12 serv hidden-md-down">
+                  <div class="service-item">
+                      <div class="art">
+                          <i class="fas fa-money-bill"></i>
+                          <h3>Business Growth</h3>
+                      </div>
+                      <div class="service-text">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas harum non possimus aliquam. Beatae repellendus voluptatibus, aperiam quaerat.</p>
+                    </div>
+              </article>
+          </div>
+          <div class="row service-2">
+              <article class="col-lg-4 col-md-6 col-xs-12 serv">
+                  <div class="service-item">
+                      <div class="art">
+                          <i class="fas fa-briefcase"></i>
+                          <h3>Risk Management</h3>
+                      </div>
+                      <div class="service-text">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas harum non possimus aliquam. Beatae repellendus voluptatibus, aperiam quaerat.</p>
+                    </div>
+              </article>
+              <article class="col-lg-4 col-md-6 col-xs-12 serv">
+                  <div class="service-item">
+                      <div class="art">
+                          <i class="fas fa-tasks"></i>
+                          <h3>Marketing Plan</h3>
+                      </div>
+                      <div class="service-text">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas harum non possimus aliquam. Beatae repellendus voluptatibus, aperiam quaerat.</p>
+                    </div>
+              </article>
+              <article class="col-lg-4 col-md-6 col-xs-12 serv mt-50 hidden-md-down">
+                  <div class="service-item">
+                      <div class="art">
+                          <i class="fas fa-globe"></i>
+                          <h3>Global Business</h3>
+                      </div>
+                      <div class="service-text">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas harum non possimus aliquam. Beatae repellendus voluptatibus, aperiam quaerat.</p>
+                    </div>
+              </article>
+          </div>
+      </div>
+  </div>
+    </section>
+<!-- End Section Services -->
+
+
+<!-- Section What We Offer -->
+{% include 'website/offer.html'%}
+<!-- End Section What We Offer -->
+
+
+
+<!-- Section Portfolio -->
+{% include 'website/portfolio.html'%}
+<!-- End Section Portfolio -->
+
+
+
+<!-- Team Members -->
+<section class="team">
+    <div class="container">
+        <div class="sec-title">
+            <h2>Our <span>Team</span></h2>
+        </div>
+        <div class="row team-all">
+            {% for user in teams %}
+            <div class="col-lg-3 col-md-6 team-pro hover-effect">
+                <div class="team-wrap">
+                    <div class="team-img">
+                        <img src="../../static/uploads/{{user.image}}" alt="" />
+                    </div>
+                    <div class="team-content">
+                        <div class="team-info">
+                            <h3>{{user.fullname}}</h3>
+                            <p>{{user.duty}}</p>
+                            <div class="team-socials">
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+       
+        </div>
+    </div>
+    </section>
+<!-- End Section TM -->
+
+
+
+<!-- Section Choose-->
+<section>
+    <div class="choose">
+      <div class="container">
+          <div class="choose-heading">
+              <h2 style="text-align: center;">Why <span>Choose Us?</span></h2>
+              <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, iusto.</p>
+          </div>  
+          <div class="row row-1">
+              {% for choose in chooses %}
+              <div class="col-lg-4 col-md-6 col-xs-12">
+                <div class="choose-item">
+                    <div class="choose-text">
+                      <i class="fas fa-coins fa-3x"></i>
+                      <p>{{choose.content}}</p>
+                    </div>
+                </div>
+              </div>
+              {% endfor %}
+              
+          </div>
+        
+      </div>
+  </div>
+    </section>
+<!--  End Section Choose -->
+
+
+
+<!-- Section Project -->
+<section class="portfolio">
+    <div class="container-fluid">
+        <div class="section-title">
+                <h2 style="text-align: center;" >Latest <span>Projects</span></h2>
+                <p style="text-align: center;">There are many variations of lorem of Lorem Ipsum available for use a sit amet, consectetur debits adipisicing lacus.</p>
+        </div>
+        <br>
+        <div class="row portfolio-items">
+            {% for project in projects %}
+            <div class="item col-lg-3 col-md-6 col-xs-12">
+                
+                <div class="single-portfolio">
+                    <div class="portfolio-img">
+                        <img src="../../static/uploads/{{project.image}}" alt="" />
+                        <div class="portfolio-view">
+                            <div class="item-wrap">
+                                <a class="img-poppu" href="/project/detail/{{project.id}}">
+                                    <span class="plus"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-text">
+                        {% for category in categories %}
+                        {% if project.category_id==category.id %}
+                        <a style="text-decoration:none;" href=""><h4>{{category.name}}</h4></a>
+                        {% endif %}
+                        {% endfor %}
+                        
+                        <a style="text-decoration:none;" href=""><h4>{{project.name}}</h4></a>
+                    </div>
+                </div>
+               
+         
+            </div>
+            {% endfor %}
+      
+        </div>
+    </div>
+    </section>
+<!--  -->
+
+
+<!-- Section Blog -->
+<section class="blog">
+    <div class="container">
+        <div class="sec-title">
+            <h2>Latest <span>News</span></h2>
+        </div>
+        <div class="row">
+            {% for blog in blogs %}
+            <div class="col-lg-4 col-md-6 col-xs-12 blog-pots">
+                <div class="single-blog-post">
+                    <div class="img-box">
+                        <img src="../../static/uploads/{{blog.image}}" alt="">
+                    </div>
+                    <div class="blog-info">
+                        <a href="/blog/detail/{{blog.id}}"><h3>{{blog.title}}</h3></a>
+                        {% for tag in tags %}
+                        {% if blog.tag_id==tag.id %}
+                        <div class="date">
+                            <p>{{blog.date}}|
+                            
+                            {{tag.name}}
+                            
+                            </p>
+                        </div>
+                        {% endif %}
+                        {% endfor %} 
+                        <p>{{blog.content}}</p>
+                        <a href="/blog/detail/{{blog.id}}" class="btn btn-secondary">Read More...</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    </section>
+<!-- End Section Blog -->
+
+
+{% include 'website/contact.html'%}
+<!--Section Contact -->
+
+
+<a href="#" class="scroll-to-top" style="display: block;"> <i class="fas fa-angle-up"></i></a>
+
+<script src="../../static/website/js/jquery-3.5.1.js"></script>
+
+<!-- Project -->
+<script src="../../static/website/js/lightcase.js"></script>
+<script src="../../static/website/js/smooth-scroll.min.js"></script>
+<script src="../../static/website/js/nav.js"></script>
+<script src="../../static/website/js/isotope.pkgd.min.js"></script>
+<script src="../../static/website/js/imagesloaded.pkgd.min.js"></script>
+<script src="../../static/website/js/port.js"></script>
+
+<!-- Header Slider Js -->
+<script src="../../static/website/js/slider.js"></script>
+
+
+
+<script src="../../static/website/js/portfolio.js"></script>
+<!-- Scroll Js -->
+<script src="../../static/website/js/scroll.js"></script>
+</body>
+</html>

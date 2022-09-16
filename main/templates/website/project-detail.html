@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/website/css/Responsive Grid System/grid.css">
+    <link rel="stylesheet" href="../../static/website/css/style.css">
+    <link rel="stylesheet" href="../../static/website/css/contact.css">
+    <link rel="stylesheet" href="../../static/website/css/offer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- Top Header -->
+{% include 'website/top_header.html'%}
+  <!-- Section Header menu  -->
+  {% include 'website/navbar.html'%}
+
+  <!-- Header Detail -->
+<section>
+    <div class="slideshow-container">
+            
+        <div class="mySlides fade">
+            <img src="../../static/website/image/Services/detail.jpg">
+            <div class="title">DDD</div>
+            <div class="content">SSS</div>
+        </div>
+    
+    </div>  
+</section>
+  
+
+
+
+<!-- Section Project Detail -->
+<section>
+    <div class="p-details">
+    <div class="container">
+       <div class="p-detail-img">
+        <img src="../../static/uploads/{{project.image}}" alt="" style="height: 500px;" >
+        <div class="row p-detail-info">
+        
+            <div class="col-xs-12 col-md-4 col-sm-4">
+                <!-- Deadline -->
+                <div class="p-detail icon">
+                    <i class="fas fa-history"></i>
+                    <h4>Date</h4>
+                    <p>{{project.date}}</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4 col-sm-4">
+                <!-- Client -->
+                <div class="p-detail icon">
+                    <i class="far fa-user-circle"></i>
+                    <h4>Client</h4>
+                    <p>{{project.company}}</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4 col-sm-4">
+                <!-- Category -->
+                <div class="p-detail icon">
+                    <i class="fas fa-book"></i>
+                    <h4>Category</h4>
+                    {% for category in categories %}
+                        {% if project.category_id==category.id %}
+                        <p>{{category.name}}</p>
+                        {% endif %}
+                        {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+        <p>{{project.content}}</p>
+        
+    </div>
+   
+    </div>
+    </div>
+</section>
+
+<!-- Section Portfolio -->
+{% include 'website/portfolio.html'%}
+
+<!-- Offer -->
+{% include 'website/offer.html'%}
+
+
+<!--Section Contact -->
+{% include 'website/contact.html'%}
+
+<a href="#" class="scroll-to-top" style="display: block;"> <i class="fas fa-angle-up"></i></a>
+
+
+<script src="../../../main/static/website/js/jquery-3.5.1.js"></script>
+<script src="../../../main/static/website/js/portfolio.js"></script>
+<script src="../../../main/static/website/js/scroll.js"></script>
+</body>
+</html>

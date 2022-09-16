@@ -1,0 +1,31 @@
+{% extends "admin/index.html" %}
+{% block page %}
+<h3>Blog Postlari</h4>
+<a href="/admin/blog/add_blog"><button class="btn btn-primary">Yeni Blog Yarat</button></a>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Blog Basligi</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    
+    {% for blog in all_blog %}
+    <tr>
+        <th>{{blog.id}}</th>
+        <td>{{blog.title}}</td>
+        <td>
+            <a class="p-2 mb-2 bg-danger text-white" href="/admin/blog/delete/{{blog.id}}">Sil</a>
+            <a class="p-2 mb-2 bg-primary text-white" href="/admin/blog/update/{{blog.id}}">Yenile</a>
+        </td>
+    </tr>
+    {% endfor %}
+     
+        
+    </tbody>
+  </table>
+
+
+{% endblock %}
